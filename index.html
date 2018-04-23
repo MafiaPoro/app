@@ -8,6 +8,7 @@
 <script type="text/javascript" src="qrcode.js"></script>
 </head>
 <body>
+	<p>Test Box</p>
 <input id="text" type="text" value="Type Here" style="width:50%" /><br />
 <div id="qrcode" style="width:250px; height:250px; margin-top:15px;"></div>
 
@@ -19,14 +20,12 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 
 function makeCode () {
 	var elText = document.getElementById("text");
-
 // Checks to see if the box is empty and gives an alert
 	// if (!elText.value) {
 	// 	alert('Type Something')
 	// 	elText.focus();
 	// 	return;
 	// }
-
 	qrcode.makeCode(elText.value);
 }
 
